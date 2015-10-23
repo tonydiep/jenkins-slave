@@ -17,6 +17,9 @@ RUN yum install -y initscripts openssh openssh-server openssh-clients sudo passw
 RUN sshd-keygen
 RUN sed -i "s/#UsePrivilegeSeparation.*/UsePrivilegeSeparation no/g" /etc/ssh/sshd_config && sed -i "s/UsePAM.*/UsePAM no/g" /etc/ssh/sshd_config
 RUN yum install -y git
+RUN yum install -y maven
+RUN yum install -y firefox
+RUN yum install -y Xvfb
 RUN yum install -y java-1.8.0-openjdk-devel
 
 # setup default user

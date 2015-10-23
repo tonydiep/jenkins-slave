@@ -9,7 +9,7 @@ username: jenkins
 password: jenkins
 
 ### start container
-docker run -d -p 22:22 jenkins-slave
+docker run -d -p 22:22 -h jenkins-slave jenkins-slave
 
 ### test login to container
 ssh -p 22 jenkins@127.0.0.1
